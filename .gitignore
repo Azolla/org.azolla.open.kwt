@@ -1,0 +1,7 @@
+# Common
+.DS_Store
+.settings
+target
+
+# Eclipse artifacts
+azolla-*/src/main/java/META-INF/MANIFEST.MF
