@@ -6,6 +6,7 @@
  */
 package org.azolla.open.kwt.task;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.Callable;
@@ -35,9 +36,10 @@ public class UITaskTest
 				final JFrame jframe = new JFrame("Test");
 				jframe.setSize(521, 520);
 				jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				jframe.setLayout(new BorderLayout());
 
-				JButton jbutton = new JButton("TestButton");
-				jbutton.addActionListener(new ActionListener()
+				JButton jbutton1 = new JButton("TestButton");
+				jbutton1.addActionListener(new ActionListener()
 				{
 
 					@Override
@@ -63,7 +65,37 @@ public class UITaskTest
 						}
 					}
 				});
-				jframe.add(jbutton);
+				jframe.add(jbutton1, BorderLayout.WEST);
+
+				JButton jbutton2 = new JButton("TestButton");
+				jbutton2.addActionListener(new ActionListener()
+				{
+
+					@Override
+					public void actionPerformed(ActionEvent e)
+					{
+						UITask<Boolean> task = new UITask<Boolean>(new Callable<Boolean>()
+						{
+
+							@Override
+							public Boolean call() throws Exception
+							{
+								TimeUnit.SECONDS.sleep(30);
+								return true;
+							}
+						}, jframe);
+						try
+						{
+							task.execute();
+						}
+						catch(Exception e1)
+						{
+							e1.printStackTrace();
+						}
+					}
+				});
+				jframe.add(jbutton2, BorderLayout.EAST);
+
 				jframe.setVisible(true);
 			}
 		});
