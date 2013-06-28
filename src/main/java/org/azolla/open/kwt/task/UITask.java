@@ -50,6 +50,14 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
 
+/**
+ * 
+ * UI Task (non-progress)
+ *
+ * @param 	<T>	Type of task result
+ * @author 	sk@azolla.org
+ * @since 	ADK1.0
+ */
 public class UITask<T> implements InvocationHandler, Callable<T>
 {
 	private static final Logger		LOG						= LoggerFactory.getLogger(UITask.class);
