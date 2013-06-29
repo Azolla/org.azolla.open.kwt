@@ -241,6 +241,16 @@ public class UITask<T> implements InvocationHandler, Callable<T>
 				{
 					return callable.call();
 				}
+
+				/**
+				 * @see javax.swing.SwingWorker#done()
+				 */
+				@Override
+				protected void done()
+				{
+					stopWaitCursor();
+					closeProgress();
+				}
 			};
 			worker.execute();
 
@@ -270,18 +280,22 @@ public class UITask<T> implements InvocationHandler, Callable<T>
 		finally
 		{
 			stopWaitCursor();
+			closeProgress();
+		}
+	}
 
-			if(timer != null)
-			{
-				timer.stop();
-				timer = null;
-			}
+	public void closeProgress()
+	{
+		if(timer != null)
+		{
+			timer.stop();
+			timer = null;
+		}
 
-			if(dialog != null)
-			{
-				dialog.dispose();
-				dialog = null;
-			}
+		if(dialog != null)
+		{
+			dialog.dispose();
+			dialog = null;
 		}
 	}
 
@@ -402,24 +416,11 @@ public class UITask<T> implements InvocationHandler, Callable<T>
 
 	private void cancel()
 	{
-		if(!(cancelable))
+		if(cancelable)
 		{
-			return;
+			worker.cancel(true);
+			closeProgress();
 		}
-		worker.cancel(true);
-
-		if(timer != null)
-		{
-			timer.stop();
-			timer = null;
-		}
-
-		if(dialog == null)
-		{
-			return;
-		}
-		dialog.dispose();
-		dialog = null;
 	}
 
 	private void startWaitCursor()
@@ -428,14 +429,13 @@ public class UITask<T> implements InvocationHandler, Callable<T>
 
 		for(Window window : windows)
 		{
-			if(!(window instanceof RootPaneContainer))
+			if(window instanceof RootPaneContainer)
 			{
-				continue;
+				Component glass = ((RootPaneContainer) window).getGlassPane();
+				glass.setCursor(Cursor.getPredefinedCursor(3));
+				glass.setVisible(true);
+				glassList.add(glass);
 			}
-			Component glass = ((RootPaneContainer) window).getGlassPane();
-			glass.setCursor(Cursor.getPredefinedCursor(3));
-			glass.setVisible(true);
-			glassList.add(glass);
 		}
 	}
 
@@ -525,11 +525,10 @@ public class UITask<T> implements InvocationHandler, Callable<T>
 		KeyboardFocusManager focusManager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
 
 		Component focus = focusManager.getPermanentFocusOwner();
-		if(focus == null)
+		if(focus != null)
 		{
-			return;
+			focus.requestFocus();
 		}
-		focus.requestFocus();
 	}
 
 	private EventQueue getEventQueue()
