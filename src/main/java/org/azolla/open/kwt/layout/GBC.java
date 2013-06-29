@@ -20,25 +20,24 @@ public class GBC extends GridBagConstraints
 	private static final long	serialVersionUID	= 1592514305499234713L;
 
 	/**
-	 * gridx,gridy：设置组件的起始单元格位置
-	 * gridx设置为GridBagConstraints.RELATIVE代表此组件位于之前所加入组件的右边。
-	 * gridy设置为GridBagConstraints.RELATIVE代表此组件位于以前所加入组件的下面。
+	 * @see org.azolla.open.kwt.layout.GBC#GBC(int, int, int, int)
 	 */
-	public GBC(int gridx, int gridy)
+	private GBC(int gridx, int gridy)
 	{
 		this.gridx = gridx;
 		this.gridy = gridy;
 	}
 
 	/**
-	 * gridx,gridy：设置组件的位置
+	 * gridx,gridy：设置组件的位置,从0开始
 	 * gridx设置为GridBagConstraints.RELATIVE代表此组件位于之前所加入组件的右边。
 	 * gridy设置为GridBagConstraints.RELATIVE代表此组件位于以前所加入组件的下面。
 	 * 
 	 * gridwidth,gridheight:用来设置组件所占的单元格数，默认值皆为1。
 	 * 可以使用GridBagConstraints.REMAINDER常量，代表此组件为此行或此列的最后一个组件，而且会占据所有剩余的空间。
+	 * 可以使用GridBagConstraints.RELATIVE常量，代表此组件为此行或此列的倒数第二个组件，而且会占据所有剩余的空间。
 	 */
-	public GBC(int gridx, int gridy, int gridwidth, int gridheight)
+	private GBC(int gridx, int gridy, int gridwidth, int gridheight)
 	{
 		this.gridx = gridx;
 		this.gridy = gridy;
