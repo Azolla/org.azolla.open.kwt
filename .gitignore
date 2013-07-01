@@ -4,4 +4,4 @@
 target
 
 # Eclipse artifacts
-azolla-*/src/main/java/META-INF/MANIFEST.MF
+*azolla*/src/main/java/META-INF/MANIFEST.MF
