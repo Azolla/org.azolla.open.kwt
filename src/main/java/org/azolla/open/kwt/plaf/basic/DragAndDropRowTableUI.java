@@ -68,75 +68,75 @@ public class DragAndDropRowTableUI extends BasicTableUI
 	protected MouseInputListener createMouseInputListener()
 	{
 		return new BasicTableUI.MouseInputHandler()
+		{
+			@Override
+			public void mousePressed(MouseEvent e)
 			{
-				@Override
-				public void mousePressed(MouseEvent e)
+				super.mousePressed(e);
+				point = e.getPoint();
+			}
+
+			@Override
+			public void mouseDragged(MouseEvent e)
+			{
+				TableCellEditor cellEditor = table.getCellEditor();
+				if(null != cellEditor)
 				{
-					super.mousePressed(e);
+					cellEditor.stopCellEditing();
+				}
+				int fromRow = table.getSelectedRow();
+				if(!(Tables.rowInBound(table, fromRow)))
+				{
+					return;
+				}
+				draging = true;
+				int toRow = getDestRow(e.getPoint().y, fromRow);
+				if(Tables.rowInBound(table, toRow))
+				{
+					changeValue(fromRow, toRow);
 					point = e.getPoint();
 				}
+				offset = Math.abs(point.y - e.getPoint().y);
+				direction = point.y - e.getPoint().y > 0;
+				table.repaint();
+			}
 
-				@Override
-				public void mouseDragged(MouseEvent e)
+			private int getDestRow(int y, int row)
+			{
+				int height = table.getRowHeight();
+				int middle = height * row + height / 2;
+				if(y > middle + height)
 				{
-					TableCellEditor cellEditor = table.getCellEditor();
-					if(null != cellEditor)
-					{
-						cellEditor.stopCellEditing();
-					}
-					int fromRow = table.getSelectedRow();
-					if(!(Tables.rowInBound(table, fromRow)))
-					{
-						return;
-					}
-					draging = true;
-					int toRow = getDestRow(e.getPoint().y, fromRow);
-					if(Tables.rowInBound(table, toRow))
-					{
-						changeValue(fromRow, toRow);
-						point = e.getPoint();
-					}
-					offset = Math.abs(point.y - e.getPoint().y);
-					direction = point.y - e.getPoint().y > 0;
-					table.repaint();
+					return(++row);
 				}
+				if(y < middle - height)
+				{
+					return(--row);
+				}
+				return -1;
+			}
 
-				private int getDestRow(int y, int row)
+			private void changeValue(int fromRow, int toRow)
+			{
+				TableModel model = table.getModel();
+				int i = 0;
+				for(int count = model.getColumnCount(); i < count; ++i)
 				{
-					int height = table.getRowHeight();
-					int middle = height * row + height / 2;
-					if(y > middle + height)
-					{
-						return(++row);
-					}
-					if(y < middle - height)
-					{
-						return(--row);
-					}
-					return -1;
+					Object sourceValue = model.getValueAt(fromRow, i);
+					Object destValue = model.getValueAt(toRow, i);
+					model.setValueAt(destValue, fromRow, i);
+					model.setValueAt(sourceValue, toRow, i);
 				}
+				table.setRowSelectionInterval(toRow, toRow);
+			}
 
-				private void changeValue(int fromRow, int toRow)
-				{
-					TableModel model = table.getModel();
-					int i = 0;
-					for(int count = model.getColumnCount(); i < count; ++i)
-					{
-						Object sourceValue = model.getValueAt(fromRow, i);
-						Object destValue = model.getValueAt(toRow, i);
-						model.setValueAt(destValue, fromRow, i);
-						model.setValueAt(sourceValue, toRow, i);
-					}
-					table.setRowSelectionInterval(toRow, toRow);
-				}
-
-				@Override
-				public void mouseReleased(MouseEvent e)
-				{
-					super.mouseReleased(e);
-					draging = false;
-					table.repaint();
-				}
-			};
+			@Override
+			public void mouseReleased(MouseEvent e)
+			{
+				super.mouseReleased(e);
+				draging = false;
+				table.repaint();
+			}
+		};
 	}
 }

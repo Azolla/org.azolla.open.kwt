@@ -90,8 +90,7 @@ public final class Tables
 		{
 			headerRenderer = header.getDefaultRenderer();
 		}
-		Component headerComp = headerRenderer.getTableCellRendererComponent(table, column.getIdentifier(), false,
-				false, -1, col);
+		Component headerComp = headerRenderer.getTableCellRendererComponent(table, column.getIdentifier(), false, false, -1, col);
 
 		int headerWidth = headerComp.getPreferredSize().width;
 		fitWidth = Math.max(fitWidth, headerWidth);
@@ -100,8 +99,7 @@ public final class Tables
 		for(int end = table.getRowCount(); row < end; row++)
 		{
 			TableCellRenderer cellRenderer = table.getCellRenderer(row, col);
-			Component cellComp = cellRenderer.getTableCellRendererComponent(table, table.getValueAt(row, col), false,
-					false, row, col);
+			Component cellComp = cellRenderer.getTableCellRendererComponent(table, table.getValueAt(row, col), false, false, row, col);
 
 			int cellWidth = cellComp.getPreferredSize().width;
 			fitWidth = Math.max(fitWidth, cellWidth);
@@ -229,8 +227,7 @@ public final class Tables
 		Object cell = null;
 		try
 		{
-			cell = table.getValueAt(table.getSelectionModel().getLeadSelectionIndex(), table.getColumnModel()
-					.getSelectionModel().getLeadSelectionIndex());
+			cell = table.getValueAt(table.getSelectionModel().getLeadSelectionIndex(), table.getColumnModel().getSelectionModel().getLeadSelectionIndex());
 		}
 		catch(Exception ex)
 		{
@@ -257,8 +254,7 @@ public final class Tables
 
 	public static boolean isTableChangedEntirely(JTable table, TableModelEvent evt)
 	{
-		return (0 == evt.getType()) && (-1 == evt.getColumn()) && (0 == evt.getFirstRow())
-				&& ((table.getRowCount() - 1 == evt.getLastRow()) || (2147483647 == evt.getLastRow()));
+		return (0 == evt.getType()) && (-1 == evt.getColumn()) && (0 == evt.getFirstRow()) && ((table.getRowCount() - 1 == evt.getLastRow()) || (2147483647 == evt.getLastRow()));
 	}
 
 	public static List<Object> getAllIdentifiers(JTable table)
@@ -422,15 +418,13 @@ public final class Tables
 			int col = table.getColumnModel().getSelectionModel().getLeadSelectionIndex();
 			Object val = Objects.firstNonNull(table.getValueAt(row, col), "");
 
-			Toolkit.getDefaultToolkit().getSystemClipboard()
-					.setContents(new StringSelection(String.valueOf(val)), null);
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(String.valueOf(val)), null);
 		}
 
 		@Override
 		public boolean isEnabled()
 		{
-			return (0 <= table.getSelectionModel().getLeadSelectionIndex())
-					&& (0 <= table.getColumnModel().getSelectionModel().getLeadSelectionIndex());
+			return (0 <= table.getSelectionModel().getLeadSelectionIndex()) && (0 <= table.getColumnModel().getSelectionModel().getLeadSelectionIndex());
 		}
 	}
 }
