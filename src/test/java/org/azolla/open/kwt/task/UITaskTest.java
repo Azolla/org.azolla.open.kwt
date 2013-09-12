@@ -37,15 +37,7 @@ public class UITaskTest
 				jframe.setSize(521, 520);
 				jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				jframe.setLayout(new BorderLayout());
-
-				JButton jbutton1 = new JButton("TestButton");
-				jbutton1.addActionListener(new ActionListener()
-				{
-
-					@Override
-					public void actionPerformed(ActionEvent e)
-					{
-						UITask<Boolean> task = new UITask<Boolean>(new Callable<Boolean>()
+				final UITask<Boolean> task = new UITask<Boolean>(new Callable<Boolean>()
 						{
 
 							@Override
@@ -55,9 +47,18 @@ public class UITaskTest
 								return true;
 							}
 						}, jframe);
+
+				JButton jbutton1 = new JButton("TestButton");
+				jbutton1.addActionListener(new ActionListener()
+				{
+
+					@Override
+					public void actionPerformed(ActionEvent e)
+					{
 						try
 						{
 							task.execute();
+							System.out.println("over61");
 						}
 						catch(Exception e1)
 						{
@@ -74,19 +75,11 @@ public class UITaskTest
 					@Override
 					public void actionPerformed(ActionEvent e)
 					{
-						UITask<Boolean> task = new UITask<Boolean>(new Callable<Boolean>()
-						{
 
-							@Override
-							public Boolean call() throws Exception
-							{
-								TimeUnit.SECONDS.sleep(30);
-								return true;
-							}
-						}, jframe);
 						try
 						{
 							task.execute();
+							System.out.println("over81");
 						}
 						catch(Exception e1)
 						{
