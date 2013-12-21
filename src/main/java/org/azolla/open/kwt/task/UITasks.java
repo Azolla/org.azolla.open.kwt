@@ -17,23 +17,23 @@ import java.util.concurrent.Callable;
  */
 public class UITasks
 {
-	public static <T> UITask<T> createUITask(Window window, Callable<T> callable)
-	{
-		return new UITask<T>(callable, window);
-	}
+    public static <T> UITask<T> createUITask(Window window, Callable<T> callable)
+    {
+        return new UITask<T>(callable, window);
+    }
 
-	public static <T> UITask<T> createUITask(Window window, String message, Callable<T> callable)
-	{
-		UITask<T> uiTask = new UITask<T>(callable, window);
-		uiTask.setMessage(message);
-		return uiTask;
-	}
+    public static <T> UITask<T> createUITask(Window window, String message, Callable<T> callable)
+    {
+        UITask<T> uiTask = new UITask<T>(callable, window);
+        uiTask.setMessage(message);
+        return uiTask;
+    }
 
-	public static <T> UITask<T> createUITask(Window window, String title, String message, Callable<T> callable)
-	{
-		UITask<T> uiTask = new UITask<T>(callable, window);
-		uiTask.setTitle(title);
-		uiTask.setMessage(message);
-		return uiTask;
-	}
+    public static <T> UITask<T> createUITask(Window window, String title, String message, Callable<T> callable)
+    {
+        UITask<T> uiTask = new UITask<T>(callable, window);
+        uiTask.setTitle(title);
+        uiTask.setMessage(message);
+        return uiTask;
+    }
 }
