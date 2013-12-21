@@ -9,6 +9,7 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.azolla.open.kwt</artifactId>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	<name>Azolla - Widget Toolkit</name>
 	<description>Azolla - Widget Toolkit</description>
