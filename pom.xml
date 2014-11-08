@@ -9,33 +9,100 @@
 	</parent>
 
 	<artifactId>org.azolla.open.kwt</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>KWT: Azolla.org Widget Toolkit</name>
 	<description>KWT is a suite of core and expanded libraries that include utility classes, swing classes, and much much more.</description>
-	
+	<url>https://github.com/Azollas/org.azolla.open.kwt</url>
+	<inceptionYear>2011</inceptionYear>
+	<organization>
+		<name>Azollas</name>
+		<url>https://github.com/Azollas</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>The Azolla.org Open Source is released under version 2.0 of the Apache License.</comments>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>Azolla</id>
+			<name>ShaneKing</name>
+			<email>github@azolla.org</email>
+			<url>https://github.com/Azolla</url>
+			<organization>Azollas</organization>
+			<organizationUrl>https://github.com/Azollas</organizationUrl>
+			<roles>
+				<role>Project Manager</role>
+				<role>Architect</role>
+			</roles>
+			<timezone>+8</timezone>
+			<properties>
+				<dept>No</dept>
+			</properties>
+		</developer>
+		<developer>
+			<id>iShaneKing</id>
+			<name>iShaneKing</name>
+			<email>git@azolla.org</email>
+			<url>https://github.com/iShaneKing</url>
+			<organization>Azollas</organization>
+			<organizationUrl>https://github.com/Azollas</organizationUrl>
+			<roles>
+				<role>Team Leader</role>
+			</roles>
+			<timezone>+8</timezone>
+			<properties>
+				<dept>No</dept>
+			</properties>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Azolla</name>
+			<email>github@azolla.org</email>
+			<url>https://github.com/Azolla</url>
+			<organization>Azollas</organization>
+			<organizationUrl>https://github.com/Azollas</organizationUrl>
+			<roles>
+				<role>Project Manager</role>
+				<role>Architect</role>
+			</roles>
+			<timezone>+8</timezone>
+			<properties>
+				<dept>No</dept>
+			</properties>
+		</contributor>
+	</contributors>
+	<scm>
+		<connection>scm:git:git@github.com:Azollas/org.azolla.open.kwt.git</connection>
+		<developerConnection>scm:git:git@github.com:Azollas/org.azolla.open.kwt.git</developerConnection>
+		<url>git@github.com:Azollas/org.azolla.open.kwt.git</url>
+	</scm>
+	<issueManagement>
+		<system>Github</system>
+		<url>https://github.com/Azollas/org.azolla.open.kwt/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis-CI</system>
+		<url>https://travis-ci.org/Azollas/org.azolla.open.kwt</url>
+	</ciManagement>
 
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -44,6 +111,14 @@
 		<dependency>
 			<groupId>netbeans</groupId>
 			<artifactId>nbantext</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
 	</dependencies>
 </project>
