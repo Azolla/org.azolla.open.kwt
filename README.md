@@ -1,8 +1,8 @@
-## Azolla.org Open Source [![Build Status](https://travis-ci.org/Azollas/org.azolla.open.kwt.png?branch=mirror)](https://travis-ci.org/Azollas/org.azolla.open.kwt) 
-More to see [open.azolla.org][].
+## Azolla.org Library [![Build Status](https://travis-ci.org/Azollas/org.azolla.l.kwt.png?branch=mirror)](https://travis-ci.org/Azollas/org.azolla.l.kwt) 
+More to see [l.azolla.org][].
 
 ## License
-The Azolla.org Open Source is released under version 2.0 of the [Apache License][].
+The Azolla.org Library is released under version 2.0 of the [Apache License][].
 
-[open.azolla.org]: http://open.azolla.org/
+[l.azolla.org]: http://l.azolla.org/
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
