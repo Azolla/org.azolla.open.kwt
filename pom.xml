@@ -2,17 +2,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.azolla.open</groupId>
-		<artifactId>org.azolla.open</artifactId>
+		<groupId>org.azolla.l</groupId>
+		<artifactId>org.azolla.l</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../org.azolla.open</relativePath>
+		<relativePath>../org.azolla.l</relativePath>
 	</parent>
 
-	<artifactId>org.azolla.open.kwt</artifactId>
+	<artifactId>org.azolla.l.kwt</artifactId>
 	<packaging>jar</packaging>
 	<name>KWT: Azolla.org Widget Toolkit</name>
 	<description>KWT is a suite of core and expanded libraries that include utility classes, swing classes, and much much more.</description>
-	<url>https://github.com/Azollas/org.azolla.open.kwt</url>
+	<url>https://github.com/Azollas/org.azolla.l.kwt</url>
 	<inceptionYear>2011</inceptionYear>
 	<organization>
 		<name>Azollas</name>
@@ -23,7 +23,7 @@
 			<name>The Apache Software License, Version 2.0</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 			<distribution>repo</distribution>
-			<comments>The Azolla.org Open Source is released under version 2.0 of the Apache License.</comments>
+			<comments>The Azolla.org Library is released under version 2.0 of the Apache License.</comments>
 		</license>
 	</licenses>
 	<developers>
@@ -77,17 +77,17 @@
 		</contributor>
 	</contributors>
 	<scm>
-		<connection>scm:git:git@github.com:Azollas/org.azolla.open.kwt.git</connection>
-		<developerConnection>scm:git:git@github.com:Azollas/org.azolla.open.kwt.git</developerConnection>
-		<url>git@github.com:Azollas/org.azolla.open.kwt.git</url>
+		<connection>scm:git:git@github.com:Azollas/org.azolla.l.kwt.git</connection>
+		<developerConnection>scm:git:git@github.com:Azollas/org.azolla.l.kwt.git</developerConnection>
+		<url>git@github.com:Azollas/org.azolla.l.kwt.git</url>
 	</scm>
 	<issueManagement>
 		<system>Github</system>
-		<url>https://github.com/Azollas/org.azolla.open.kwt/issues</url>
+		<url>https://github.com/Azollas/org.azolla.l.kwt/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>Travis-CI</system>
-		<url>https://travis-ci.org/Azollas/org.azolla.open.kwt</url>
+		<url>https://travis-ci.org/Azollas/org.azolla.l.kwt</url>
 	</ciManagement>
 
 	<dependencies>

@@ -4,7 +4,7 @@
  * Copyright (c) 2011-2013 azolla.org All rights reserved.
  * Azolla PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. 
  */
-package org.azolla.open.kwt.tree;
+package org.azolla.l.kwt.tree;
 
 import java.util.Collections;
 import java.util.List;

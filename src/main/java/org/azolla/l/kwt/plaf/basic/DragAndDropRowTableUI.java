@@ -4,7 +4,7 @@
  * Copyright (c) 2011-2013 azolla.org All rights reserved.
  * Azolla PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. 
  */
-package org.azolla.open.kwt.plaf.basic;
+package org.azolla.l.kwt.plaf.basic;
 
 import java.awt.Graphics;
 import java.awt.Point;
@@ -17,7 +17,7 @@ import javax.swing.plaf.basic.BasicTableUI;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableModel;
 
-import org.azolla.open.kwt.table.Tables;
+import org.azolla.l.kwt.table.Tables;
 
 /**
  * Drag single row up or down

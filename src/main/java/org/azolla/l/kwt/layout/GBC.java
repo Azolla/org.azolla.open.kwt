@@ -4,7 +4,7 @@
  * Copyright (c) 2011-2013 azolla.org All rights reserved.
  * Azolla PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. 
  */
-package org.azolla.open.kwt.layout;
+package org.azolla.l.kwt.layout;
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -20,7 +20,7 @@ public class GBC extends GridBagConstraints
     private static final long serialVersionUID = 1592514305499234713L;
 
     /**
-     * @see org.azolla.open.kwt.layout.GBC#GBC(int, int, int, int)
+     * @see org.azolla.l.kwt.layout.GBC#GBC(int, int, int, int)
      */
     private GBC(int gridx, int gridy)
     {
@@ -43,7 +43,7 @@ public class GBC extends GridBagConstraints
     }
 
     /**
-     * @see org.azolla.open.kwt.layout.GBC#GBC(int, int)
+     * @see org.azolla.l.kwt.layout.GBC#GBC(int, int)
      */
     public static GBC grid(int gridx, int gridy)
     {
@@ -51,7 +51,7 @@ public class GBC extends GridBagConstraints
     }
 
     /**
-     * @see org.azolla.open.kwt.layout.GBC#GBC(int, int, int, int)
+     * @see org.azolla.l.kwt.layout.GBC#GBC(int, int, int, int)
      */
     public static GBC grid(int gridx, int gridy, int gridwidth, int gridheight)
     {
@@ -72,7 +72,7 @@ public class GBC extends GridBagConstraints
     }
 
     /**
-     * @see org.azolla.open.kwt.layout.GBC#insets(int, int, int, int)
+     * @see org.azolla.l.kwt.layout.GBC#insets(int, int, int, int)
      */
     public GBC insets(int distance)
     {
