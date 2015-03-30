@@ -26,7 +26,7 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 import com.google.common.collect.Lists;
 
 /**
@@ -301,7 +301,7 @@ public final class Tables
             {
                 for(int col = 0; col < table.getColumnCount(); col++)
                 {
-                    Object val = Objects.firstNonNull(table.getValueAt(row, col), "");
+                    Object val = MoreObjects.firstNonNull(table.getValueAt(row, col), "");
                     builder.append(String.valueOf(val));
                     builder.append('\t');
                 }
@@ -341,7 +341,7 @@ public final class Tables
             {
                 for(int col : cols)
                 {
-                    Object val = Objects.firstNonNull(table.getValueAt(row, col), "");
+                    Object val = MoreObjects.firstNonNull(table.getValueAt(row, col), "");
                     builder.append(String.valueOf(val));
                     builder.append('\t');
                 }
@@ -381,7 +381,7 @@ public final class Tables
                 int col = 0;
                 for(int end = table.getColumnCount(); col < end; col++)
                 {
-                    Object val = Objects.firstNonNull(table.getValueAt(row, col), "");
+                    Object val = MoreObjects.firstNonNull(table.getValueAt(row, col), "");
                     builder.append(String.valueOf(val));
                     builder.append('\t');
                 }
@@ -416,7 +416,7 @@ public final class Tables
         {
             int row = table.getSelectionModel().getLeadSelectionIndex();
             int col = table.getColumnModel().getSelectionModel().getLeadSelectionIndex();
-            Object val = Objects.firstNonNull(table.getValueAt(row, col), "");
+            Object val = MoreObjects.firstNonNull(table.getValueAt(row, col), "");
 
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(String.valueOf(val)), null);
         }
