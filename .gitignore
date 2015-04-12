@@ -1,6 +1,7 @@
 *.class
 .DS_Store
 .settings
+.idea
 target
 *_mvn_deploy.launch
 
