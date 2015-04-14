@@ -1,9 +1,21 @@
-*.class
+# system
 .DS_Store
+
+# ide eclipse
 .settings
-.idea
-target
+.project
+.classpath
 *_mvn_deploy.launch
+
+# ide idea
+.idea
+*.iml
+
+# mvn
+target
+
+# java
+*.class
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
