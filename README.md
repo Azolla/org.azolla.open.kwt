@@ -1,4 +1,4 @@
-## Azolla.org Library [![Build Status](https://travis-ci.org/Azollas/org.azolla.l.kwt.png?branch=mirror)](https://travis-ci.org/Azollas/org.azolla.l.kwt) 
+## Azolla.org Library [![Build Status](https://travis-ci.org/Azollas/org.azolla.l.sunny.png?branch=mirror)](https://travis-ci.org/Azollas/org.azolla.l.sunny)
 More to see [l.azolla.org][].
 
 ## License

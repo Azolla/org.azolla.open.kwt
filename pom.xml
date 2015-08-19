@@ -10,8 +10,8 @@
 
 	<artifactId>org.azolla.l.sunny</artifactId>
 	<packaging>jar</packaging>
-	<name>sunny: Azolla.org Widget Toolkit</name>
-	<description>sunny is a suite of core and expanded libraries that include utility classes, swing classes, and much much more.</description>
+	<name>Azolla.org Widget Toolkit</name>
+	<description>Azolla.org Widget Toolkit</description>
 	<url>https://github.com/Azollas/org.azolla.l.sunny</url>
 	<inceptionYear>2011</inceptionYear>
 	<organization>

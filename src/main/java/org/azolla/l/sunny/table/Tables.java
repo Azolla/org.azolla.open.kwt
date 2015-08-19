@@ -4,7 +4,7 @@
  * Copyright (c) 2011-2013 azolla.org All rights reserved.
  * Azolla PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. 
  */
-package org.azolla.l.kwt.table;
+package org.azolla.l.sunny.table;
 
 import java.awt.Component;
 import java.awt.Point;

@@ -4,7 +4,7 @@
  * Copyright (c) 2011-2013 azolla.org All rights reserved.
  * Azolla PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. 
  */
-package org.azolla.l.kwt.task;
+package org.azolla.l.sunny.task;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-
-import org.azolla.l.kwt.task.UITask;
 
 /**
  * The coder is very lazy, nothing to write for this UITaskTest class
