@@ -8,11 +8,11 @@
 		<relativePath>../org.azolla.l</relativePath>
 	</parent>
 
-	<artifactId>org.azolla.l.kwt</artifactId>
+	<artifactId>org.azolla.l.sunny</artifactId>
 	<packaging>jar</packaging>
-	<name>KWT: Azolla.org Widget Toolkit</name>
-	<description>KWT is a suite of core and expanded libraries that include utility classes, swing classes, and much much more.</description>
-	<url>https://github.com/Azollas/org.azolla.l.kwt</url>
+	<name>sunny: Azolla.org Widget Toolkit</name>
+	<description>sunny is a suite of core and expanded libraries that include utility classes, swing classes, and much much more.</description>
+	<url>https://github.com/Azollas/org.azolla.l.sunny</url>
 	<inceptionYear>2011</inceptionYear>
 	<organization>
 		<name>Azollas</name>
@@ -77,17 +77,17 @@
 		</contributor>
 	</contributors>
 	<scm>
-		<connection>scm:git:git@github.com:Azollas/org.azolla.l.kwt.git</connection>
-		<developerConnection>scm:git:git@github.com:Azollas/org.azolla.l.kwt.git</developerConnection>
-		<url>git@github.com:Azollas/org.azolla.l.kwt.git</url>
+		<connection>scm:git:git@github.com:Azollas/org.azolla.l.sunny.git</connection>
+		<developerConnection>scm:git:git@github.com:Azollas/org.azolla.l.sunny.git</developerConnection>
+		<url>git@github.com:Azollas/org.azolla.l.sunny.git</url>
 	</scm>
 	<issueManagement>
 		<system>Github</system>
-		<url>https://github.com/Azollas/org.azolla.l.kwt/issues</url>
+		<url>https://github.com/Azollas/org.azolla.l.sunny/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>Travis-CI</system>
-		<url>https://travis-ci.org/Azollas/org.azolla.l.kwt</url>
+		<url>https://travis-ci.org/Azollas/org.azolla.l.sunny</url>
 	</ciManagement>
 
 	<dependencies>
