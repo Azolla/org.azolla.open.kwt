@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.azolla.l</groupId>
 		<artifactId>org.azolla.l</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.8</version>
 		<relativePath>../org.azolla.l</relativePath>
 	</parent>
 
@@ -92,10 +92,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 		</dependency>
@@ -107,10 +103,6 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>netbeans</groupId>
-			<artifactId>nbantext</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
