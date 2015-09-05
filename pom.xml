@@ -112,5 +112,11 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
+
+        <dependency>
+            <groupId>org.azolla.l</groupId>
+            <artifactId>org.azolla.l.ling</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
 	</dependencies>
 </project>
