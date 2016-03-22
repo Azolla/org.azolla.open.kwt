@@ -1,5 +1,5 @@
-## Azolla.org Library
-More to see [l.azolla.org][].
+## Sunny
+Azolla.org Widget Toolkit, More to see [l.azolla.org][].
 
 ## Dependencies
 [![][versioneye img]][versioneye]
@@ -19,7 +19,7 @@ More to see [l.azolla.org][].
 ## License
 [![][license img]][license]
 
-The Azolla.org Library is released under version 2.0 of the [Apache License][].
+The Azolla.org Library is released under [MIT][].
 
 
 
@@ -48,6 +48,6 @@ The Azolla.org Library is released under version 2.0 of the [Apache License][].
 [gitter img]:https://badges.gitter.im/Join%20Chat.svg
 
 
-[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
+[MIT]: https://opensource.org/licenses/MIT
 [license]:LICENSE
-[license img]:https://img.shields.io/badge/license-apache-blue.svg
+[license img]:https://img.shields.io/badge/License-MIT-blue.svg
